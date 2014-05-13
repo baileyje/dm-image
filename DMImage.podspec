@@ -5,7 +5,8 @@ Pod::Spec.new do |spec|
   spec.version = '0.0.1'
   spec.summary = 'A set of image related utilities including an image cache and pre-decoder.'
   spec.description = <<-DESC
-
+    This library provides UIImage categories for asynchronous loading, decoding, scaling and
+    color masking.  This library provides an image cache with both in-memory and disk caching.
   DESC
   spec.homepage = 'http://devmode.com/projects/dm-image'
   spec.documentation_url = 'http://devmode.com/projects/dm-image'
