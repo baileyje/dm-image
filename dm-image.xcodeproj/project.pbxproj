@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000A3A4E672141DEB57D7ED3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 273133BDBAF14F82A1C06AF6 /* libPods.a */; };
+		88BE21FD98972FEF8BB3C6BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE273DC5595C9DE54A74AC /* Foundation.framework */; };
+		88BE24249A57A1CEB6AB097C /* DMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE2B2186E5DA9DC905CB71 /* DMImage.m */; };
+		88BE2A98AC86452440B326CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE273DC5595C9DE54A74AC /* Foundation.framework */; };
+		88BE2BBA74D14BEE02460215 /* libdm-image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE2A5B4F77EB663F0BD45F /* libdm-image.a */; };
+		88BE2C5558098ED53797DD3A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE24C1507D81EA2544186A /* XCTest.framework */; };
+		88BE2DC0F46F4BDDA166E882 /* DmImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE27D464ED5126A86095A4 /* DmImageCache.m */; };
+		88BE2ED7310A3D5B6686E7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE28CC7B53601A1038297E /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88BE20A451E2ED4FA6A6FAE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88BE227AB150E3D046A9DC74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88BE27FE74E68C76784B7BE4;
+			remoteInfo = "dm-image";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		88BE28928CF3DFA590732E51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		273133BDBAF14F82A1C06AF6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BE2051A0F03D1563516978 /* DMImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImage.h; sourceTree = "<group>"; };
+		88BE24C1507D81EA2544186A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		88BE254B0AAF9B3A5350339A /* DMImage.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = DMImage.podspec; sourceTree = "<group>"; };
+		88BE25D03C81645809B9B84E /* dm-image-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dm-image-Prefix.pch"; sourceTree = "<group>"; };
+		88BE273DC5595C9DE54A74AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		88BE27D464ED5126A86095A4 /* DmImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmImageCache.m; sourceTree = "<group>"; };
+		88BE28CC7B53601A1038297E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		88BE28D1A69D324C8D52C4E0 /* DmImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmImageCache.h; sourceTree = "<group>"; };
+		88BE2A5B4F77EB663F0BD45F /* libdm-image.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libdm-image.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88BE2B2186E5DA9DC905CB71 /* DMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImage.m; sourceTree = "<group>"; };
+		88BE2CEB015F7273FF0DC942 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		9FA348DD21F54603BD098E7E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88BE2556A2037BD906EEA4FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88BE2A98AC86452440B326CE /* Foundation.framework in Frameworks */,
+				000A3A4E672141DEB57D7ED3 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88BE2F93C8829106904D5685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88BE2C5558098ED53797DD3A /* XCTest.framework in Frameworks */,
+				88BE21FD98972FEF8BB3C6BB /* Foundation.framework in Frameworks */,
+				88BE2ED7310A3D5B6686E7C0 /* UIKit.framework in Frameworks */,
+				88BE2BBA74D14BEE02460215 /* libdm-image.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88BE21C9F843722F3B3851AC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				88BE27D464ED5126A86095A4 /* DmImageCache.m */,
+				88BE28D1A69D324C8D52C4E0 /* DmImageCache.h */,
+				88BE2B2186E5DA9DC905CB71 /* DMImage.m */,
+				88BE2051A0F03D1563516978 /* DMImage.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		88BE24AEBA502169935C6137 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88BE273DC5595C9DE54A74AC /* Foundation.framework */,
+				88BE24C1507D81EA2544186A /* XCTest.framework */,
+				88BE28CC7B53601A1038297E /* UIKit.framework */,
+				273133BDBAF14F82A1C06AF6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88BE28C5D21553877F271BE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88BE2A5B4F77EB663F0BD45F /* libdm-image.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88BE290B7EBB10FDC35480A4 = {
+			isa = PBXGroup;
+			children = (
+				88BE28C5D21553877F271BE4 /* Products */,
+				88BE24AEBA502169935C6137 /* Frameworks */,
+				88BE25D03C81645809B9B84E /* dm-image-Prefix.pch */,
+				88BE21C9F843722F3B3851AC /* Classes */,
+				88BE254B0AAF9B3A5350339A /* DMImage.podspec */,
+				88BE2CEB015F7273FF0DC942 /* Podfile */,
+				9FA348DD21F54603BD098E7E /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88BE27FE74E68C76784B7BE4 /* dm-image */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88BE20F65BEDBC8C2567EBFD /* Build configuration list for PBXNativeTarget "dm-image" */;
+			buildPhases = (
+				8DA1B13581564CD186B41CB0 /* Check Pods Manifest.lock */,
+				88BE2ACC1AA7252B5A03C805 /* Sources */,
+				88BE2556A2037BD906EEA4FC /* Frameworks */,
+				88BE28928CF3DFA590732E51 /* CopyFiles */,
+				11FC1A553CFD426493B96DFB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dm-image";
+			productName = "dm-image";
+			productReference = 88BE2A5B4F77EB663F0BD45F /* libdm-image.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		88BE295F81ACABE60CE0362C /* dm-imageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88BE2C219A4C003CCFD038FE /* Build configuration list for PBXNativeTarget "dm-imageTests" */;
+			buildPhases = (
+				88BE2DC653A88C4BFBDE070C /* Sources */,
+				88BE2F93C8829106904D5685 /* Frameworks */,
+				88BE25A2642F17A43BD7234C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88BE2A1CA097B6317D7BEC28 /* PBXTargetDependency */,
+			);
+			name = "dm-imageTests";
+			productName = "dm-imageTests";
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88BE227AB150E3D046A9DC74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "DevMode, Inc.";
+			};
+			buildConfigurationList = 88BE2E3B4005215EE639814E /* Build configuration list for PBXProject "dm-image" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 88BE290B7EBB10FDC35480A4;
+			productRefGroup = 88BE28C5D21553877F271BE4 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				88BE27FE74E68C76784B7BE4 /* dm-image */,
+				88BE295F81ACABE60CE0362C /* dm-imageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88BE25A2642F17A43BD7234C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11FC1A553CFD426493B96DFB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DA1B13581564CD186B41CB0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88BE2ACC1AA7252B5A03C805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88BE2DC0F46F4BDDA166E882 /* DmImageCache.m in Sources */,
+				88BE24249A57A1CEB6AB097C /* DMImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88BE2DC653A88C4BFBDE070C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88BE2A1CA097B6317D7BEC28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88BE27FE74E68C76784B7BE4 /* dm-image */;
+			targetProxy = 88BE20A451E2ED4FA6A6FAE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		88BE27E8EA3C94CF15FB7B07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA348DD21F54603BD098E7E /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/dm_image.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dm-image-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Release;
+		};
+		88BE28DB2342ADB525D38524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA348DD21F54603BD098E7E /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/dm_image.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dm-image-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+			};
+			name = Debug;
+		};
+		88BE29D7B59F94736E6D7055 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88BE2A9C808E2A9DEB88F154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88BE2C6B404DFBA751F9AF2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dm-image/dm-image-Prefix.pch";
+				INFOPLIST_FILE = "dm-imageTests/dm-imageTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		88BE2FC8DA2BEE35FE0E37BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dm-image/dm-image-Prefix.pch";
+				INFOPLIST_FILE = "dm-imageTests/dm-imageTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88BE20F65BEDBC8C2567EBFD /* Build configuration list for PBXNativeTarget "dm-image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88BE27E8EA3C94CF15FB7B07 /* Release */,
+				88BE28DB2342ADB525D38524 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88BE2C219A4C003CCFD038FE /* Build configuration list for PBXNativeTarget "dm-imageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88BE2FC8DA2BEE35FE0E37BE /* Release */,
+				88BE2C6B404DFBA751F9AF2B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88BE2E3B4005215EE639814E /* Build configuration list for PBXProject "dm-image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88BE2A9C808E2A9DEB88F154 /* Release */,
+				88BE29D7B59F94736E6D7055 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88BE227AB150E3D046A9DC74 /* Project object */;
+}
