@@ -13,7 +13,7 @@
 		88BE2A98AC86452440B326CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE273DC5595C9DE54A74AC /* Foundation.framework */; };
 		88BE2BBA74D14BEE02460215 /* libdm-image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE2A5B4F77EB663F0BD45F /* libdm-image.a */; };
 		88BE2C5558098ED53797DD3A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE24C1507D81EA2544186A /* XCTest.framework */; };
-		88BE2DC0F46F4BDDA166E882 /* DmImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE27D464ED5126A86095A4 /* DmImageCache.m */; };
+		88BE2DC0F46F4BDDA166E882 /* DMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BE27D464ED5126A86095A4 /* DMImageCache.m */; };
 		88BE2ED7310A3D5B6686E7C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE28CC7B53601A1038297E /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +46,9 @@
 		88BE254B0AAF9B3A5350339A /* DMImage.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = DMImage.podspec; sourceTree = "<group>"; };
 		88BE25D03C81645809B9B84E /* dm-image-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dm-image-Prefix.pch"; sourceTree = "<group>"; };
 		88BE273DC5595C9DE54A74AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		88BE27D464ED5126A86095A4 /* DmImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DmImageCache.m; sourceTree = "<group>"; };
+		88BE27D464ED5126A86095A4 /* DMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageCache.m; sourceTree = "<group>"; };
 		88BE28CC7B53601A1038297E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		88BE28D1A69D324C8D52C4E0 /* DmImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DmImageCache.h; sourceTree = "<group>"; };
+		88BE28D1A69D324C8D52C4E0 /* DMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageCache.h; sourceTree = "<group>"; };
 		88BE2A5B4F77EB663F0BD45F /* libdm-image.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libdm-image.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BE2B2186E5DA9DC905CB71 /* DMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImage.m; sourceTree = "<group>"; };
 		88BE2CEB015F7273FF0DC942 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 		88BE21C9F843722F3B3851AC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				88BE27D464ED5126A86095A4 /* DmImageCache.m */,
-				88BE28D1A69D324C8D52C4E0 /* DmImageCache.h */,
+				88BE27D464ED5126A86095A4 /* DMImageCache.m */,
+				88BE28D1A69D324C8D52C4E0 /* DMImageCache.h */,
 				88BE2B2186E5DA9DC905CB71 /* DMImage.m */,
 				88BE2051A0F03D1563516978 /* DMImage.h */,
 			);
@@ -237,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88BE2DC0F46F4BDDA166E882 /* DmImageCache.m in Sources */,
+				88BE2DC0F46F4BDDA166E882 /* DMImageCache.m in Sources */,
 				88BE24249A57A1CEB6AB097C /* DMImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

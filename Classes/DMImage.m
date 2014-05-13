@@ -3,13 +3,13 @@
 #import "DMBufferingResponseCallback.h"
 #import "DMResponse.h"
 #import "DMBlocks.h"
-#import "DmImageCache.h"
+#import "DMImageCache.h"
 
 @implementation UIImage (AsyncLoading)
 
 + (void)imageWithUrl:(NSURL*)url callback:(DMImageCallback)callback {
     NSString* key = url.absoluteString;
-    [DmImageCache.shared imageForKey:key callback:^(UIImage* image) {
+    [DMImageCache.shared imageForKey:key callback:^(UIImage* image) {
         callback(image);
     } loader:^(DMImageCallback callback) {
         [[[[DMRequest get:url.absoluteString]
@@ -25,7 +25,7 @@
 }
 
 + (void)imageWithPath:(NSString*)path callback:(DMImageCallback)callback {
-    [DmImageCache.shared imageForKey:path callback:^(UIImage* image) {
+    [DMImageCache.shared imageForKey:path callback:^(UIImage* image) {
         callback(image);
     } loader:^(DMImageCallback callback) {
         NSData* data = [NSData dataWithContentsOfFile:path];

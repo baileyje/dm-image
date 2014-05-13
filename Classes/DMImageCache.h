@@ -4,9 +4,11 @@
 
 typedef void(^DMImageLoader)(DMImageCallback);
 
-@interface DmImageCache : NSObject
+@interface DMImageCache : NSObject
 
 @property (nonatomic) NSUInteger cacheLimit;
+
+@property (nonatomic) NSUInteger maxFileAge;
 
 + (instancetype)shared;
 
@@ -25,5 +27,7 @@ typedef void(^DMImageLoader)(DMImageCallback);
 - (void)clear;
 
 - (void)clearMemory;
+
+- (void)prune;
 
 @end

@@ -1,23 +1,23 @@
-#import "DmImageCache.h"
+#import "DMImageCache.h"
 #import "NSString+Digest.h"
 
 #define DMImageCacheFileMaxAge 86400
 
-@interface DmImageCache()
+@interface DMImageCache ()
 @property (nonatomic, strong) NSString* namespace;
 @property (nonatomic, strong) NSCache* cache;
-@property (nonatomic) dispatch_queue_t workQueue;
+@property (nonatomic) dispatch_queue_t dispatchQueue;
 @property (nonatomic) NSFileManager* fileManager;
 @property (nonatomic, strong) NSString* cachePath;
 @end
 
-@implementation DmImageCache
+@implementation DMImageCache
 
 + (instancetype)shared {
-    static DmImageCache* shared = nil;
+    static DMImageCache* shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[DmImageCache alloc] initWithNamespace:@"com.devemode.image.cache"];
+        shared = [[DMImageCache alloc] initWithNamespace:@"com.devemode.image.cache"];
     });
     return shared;
 }
@@ -33,11 +33,12 @@
         self.cache = [NSCache new];
         self.cache.name = namespace;
         self.fileManager = [NSFileManager defaultManager];
-        self.workQueue = dispatch_queue_create([[@"dm-image-cache:" stringByAppendingString:namespace] cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_SERIAL);
-        self.cachePath = [DmImageCache cachePathForNamespace:namespace];
+        self.dispatchQueue = dispatch_queue_create([[@"dm-image-cache:" stringByAppendingString:namespace] cStringUsingEncoding:NSUTF8StringEncoding], DISPATCH_QUEUE_SERIAL);
+        self.cachePath = [DMImageCache cachePathForNamespace:namespace];
         if(![self.fileManager fileExistsAtPath:self.cachePath]) {
             [self.fileManager createDirectoryAtPath:self.cachePath withIntermediateDirectories:YES attributes:nil error:nil];
         }
+        self.maxFileAge = DMImageCacheFileMaxAge;
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(clearMemory) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(prune) name:UIApplicationWillResignActiveNotification object:nil];
     }
@@ -54,7 +55,7 @@
 
 - (void)addImage:(UIImage*)image withKey:(NSString*)key store:(BOOL)store {
     [self.cache setObject:image forKey:key cost:(NSUInteger) (image.size.width * image.size.height * image.scale)];
-    if(store) dispatch_async(self.workQueue, ^{
+    if(store) dispatch_async(self.dispatchQueue, ^{
         [self.fileManager createFileAtPath:[self cachePathForKey:key] contents:UIImagePNGRepresentation(image) attributes:nil];
     });
 }
@@ -68,8 +69,9 @@
 }
 
 - (void)decodeAndCallback:(UIImage*)image callback:(DMImageCallback)callback {
+    UIImage* decoded = [image decode];
     dispatch_async(dispatch_get_main_queue(), ^{
-        callback([image decode]);
+        callback(decoded);
     });
 }
 
@@ -80,7 +82,7 @@
         return callback(cached);
     }
     NSString* cachePath = [self cachePathForKey:key];
-    dispatch_async(self.workQueue, ^{
+    dispatch_async(self.dispatchQueue, ^{
         if([self.fileManager fileExistsAtPath:cachePath]) {
             NSLog(@"File Hit");
             NSData *data = [NSData dataWithContentsOfFile:cachePath];
@@ -102,7 +104,7 @@
 - (UIImage*)removeImageWithKey:(NSString*)key {
     UIImage* existing = [self imageForKey:key];
     [self.cache removeObjectForKey:key];
-    dispatch_async(self.workQueue, ^{
+    dispatch_async(self.dispatchQueue, ^{
         [self.fileManager removeItemAtPath:[self cachePathForKey:key] error:nil];
     });
     return existing;
@@ -114,14 +116,14 @@
 
 - (void)clear {
     [self clearMemory];
-    dispatch_async(self.workQueue, ^{
+    dispatch_async(self.dispatchQueue, ^{
         [self.fileManager removeItemAtPath:self.cachePath error:nil];
         [self.fileManager createDirectoryAtPath:self.cachePath withIntermediateDirectories:YES attributes:nil error:nil];
     });
 }
 
 - (void)prune {
-    dispatch_async(self.workQueue, ^{
+    dispatch_async(self.dispatchQueue, ^{
         NSDirectoryEnumerator* enumerator = [self.fileManager enumeratorAtURL:[NSURL fileURLWithPath:self.cachePath] includingPropertiesForKeys:@[NSURLContentModificationDateKey] options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
         for(NSURL* fileUrl in enumerator) {
             NSDate* modified = [fileUrl resourceValuesForKeys:@[NSURLContentModificationDateKey] error:nil][NSURLContentModificationDateKey];
