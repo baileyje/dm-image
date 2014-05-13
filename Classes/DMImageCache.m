@@ -69,7 +69,7 @@
 }
 
 - (void)decodeAndCallback:(UIImage*)image callback:(DMImageCallback)callback {
-    UIImage* decoded = [image decode];
+    UIImage* decoded = [image decoded];
     dispatch_async(dispatch_get_main_queue(), ^{
         callback(decoded);
     });
@@ -78,19 +78,16 @@
 - (void)imageForKey:(NSString*)key callback:(DMImageCallback)callback loader:(DMImageLoader)loader {
     UIImage* cached = [self imageForKey:key];
     if(cached) {
-        NSLog(@"Cache Hit");
         return callback(cached);
     }
     NSString* cachePath = [self cachePathForKey:key];
     dispatch_async(self.dispatchQueue, ^{
         if([self.fileManager fileExistsAtPath:cachePath]) {
-            NSLog(@"File Hit");
             NSData *data = [NSData dataWithContentsOfFile:cachePath];
             UIImage *image = [UIImage imageWithData:data];
             [self addImage:image withKey:key store:NO];
             [self decodeAndCallback:image callback:callback];
         } else if(loader) {
-            NSLog(@"Loading");
             loader(^ (UIImage* image) {
                 [self addImage:image withKey:key store:YES];
                 [self decodeAndCallback:image callback:callback];

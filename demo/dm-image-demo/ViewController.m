@@ -1,5 +1,6 @@
 #import "ViewController.h"
 #import "DmImageCache.h"
+#import "DMImage.h"
 #import <DMImage/DMImage.h>
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
@@ -43,7 +44,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"IMAGE_CELL" forIndexPath:indexPath];
     UIImageView* imageView = (UIImageView*) [cell viewWithTag:1];
-    [UIImage imageWithUrl:[NSURL URLWithString:self.images[indexPath.row]] callback:^(UIImage*image) {
+    [UIImage imageWithUrl:[NSURL URLWithString:self.images[indexPath.row]] callback:^(UIImage* image) {
         imageView.image = image;
     }];
     return cell;

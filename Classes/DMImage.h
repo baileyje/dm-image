@@ -15,6 +15,26 @@ typedef void(^DMImageCallback)(UIImage*);
 
 + (UIImage*)decodedImageFor:(UIImage*)image;
 
-- (UIImage*)decode;
+- (UIImage*)decoded;
+
+@end
+
+@interface UIImage (ColorMasking)
+
++ (UIImage *)image:(UIImage *)image maskedWithColor:(UIColor *)color;
+
+- (UIImage*)imageMaskedWithColor:(UIColor *)color;
+
+@end
+
+@interface UIImage (Scaling)
+
++ (UIImage*)image:(UIImage*)image withSize:(CGSize)size;
+
++ (UIImage*)image:(UIImage*)image scaledToFit:(CGSize)size;
+
+- (UIImage*)imageWithSize:(CGSize)size;
+
+- (UIImage *)imageScaledToFit:(CGSize)size;
 
 @end
