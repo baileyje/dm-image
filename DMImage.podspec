@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name = 'DMImage'
   spec.version = '0.0.1'
-  spec.summary = 'A set of image related utilities including an image cache and pre-decoder.'
+  spec.summary = 'A set of useful UIImage categories as well as an in-memory and filesystem backed image cache.'
   spec.description = <<-DESC
     This library provides UIImage categories for asynchronous loading, decoding, scaling and
     color masking.  This library provides an image cache with both in-memory and disk caching.
