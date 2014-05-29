@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   spec.name = 'DMImage'
-  spec.version = '0.0.1'
+  spec.version = '0.0.3'
   spec.summary = 'A set of useful UIImage categories as well as an in-memory and filesystem backed image cache.'
   spec.description = <<-DESC
     This library provides UIImage categories for asynchronous loading, decoding, scaling and
@@ -41,8 +41,8 @@ Pod::Spec.new do |spec|
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  spec.dependency 'DMFoundation', '~> 0.0.1'
-  spec.dependency 'DMRequest',  '~> 0.1.2'
+  spec.dependency 'DMFoundation', '~> 0.1.0'
+  spec.dependency 'DMRequest',  '~> 0.2.0'
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
